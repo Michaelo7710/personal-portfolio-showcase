@@ -10,7 +10,11 @@ Fitur ATS CV Generator menerima masukan berupa teks deskripsi lowongan kerja ata
 1. **Aturan Heuristik Validasi Semantik Dua Lapis (Two-Tier Guard):**
    - **Lapis 1 (Prompt Constraint Semantik):** Menginstruksikan model AI untuk mengevaluasi secara ketat apakah gambar atau teks merupakan informasi lowongan kerja nyata (*Job Vacancy, Career Opening, atau Job Specification*). Jika tidak, model diwajibkan mengembalikan JSON penolakan eksplisit: `{ "isValidJobVacancy": false, "rejectionReason": "..." }`.
    - **Lapis 2 (Backend Circuit Breaker HTTP 422):** Route handler pada Next.js API (`app/api/ai/cv-generate/route.ts`) menangkap sinyal penolakan semantik ini dan secara deterministik merespons dengan status code `HTTP 422 Unprocessable Entity` beserta payload JSON terstruktur, bukan membiarkan proses berlanjut atau mengembalikan HTTP 200 dengan resume palsu.
+2. **Hukum Anti-Phantom Success (Zero-Phantom-Success Law):**
+   - Melarang keras silent fallback ke template statis saat pengguna mengunggah gambar namun layanan AI Vision belum dikonfigurasi (`HTTP 503 Service Unavailable`) atau mengalami kendala kuota/koneksi (`HTTP 502 Bad Gateway`).
+   - Mencegah penyuntikan teks default ke prompt multimodal saat tidak ada input teks manual dari pengguna.
 
 ## Konsekuensi & Bukti Verifikasi
 - **Positif:** Perlindungan token LLM dan pencegahan halusinasi 100%. Gambar non-loker ditolak secara elegan dan informatif.
-- **Positif:** Diuji secara otomatis dengan test suite unit di `tests/app/api-ai-cv-generate-route.test.ts` dan `tests/portfolio-cv.test.ts` dengan status 100% Passed.
+- **Positif:** Tidak ada lagi kebohongan sukses (phantom success) saat AI tidak tersedia.
+- **Positif:** Diuji secara otomatis dengan test suite unit di `tests/app/api-ai-cv-generate-route.test.ts` (126 tests lulus 100% Passed).
