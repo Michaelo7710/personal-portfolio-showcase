@@ -1,34 +1,33 @@
-# 🏛️ Personal Portfolio AI — Enterprise Architecture Showcase & System Deep-Dive
+# 🏛️ Personal Portfolio — Architecture Showcase & Case Study
 
 <div align="center">
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.6-black?logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19.0.0-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-3178C6?logo=typescript&logoColor=white)
-![Design System](https://img.shields.io/badge/Design-Bauhaus%20Monotheme-D02020?logo=blueprint&logoColor=white)
+![Design System](https://img.shields.io/badge/Design-Bauhaus%20Theme-D02020?logo=blueprint&logoColor=white)
 ![Accessibility](https://img.shields.io/badge/Accessibility-WCAG%202.1%20AA-047857?logo=w3c&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-124%20Passed%20(100%25)-10B981?logo=checkmarx&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-123%2F123_Passed-10B981?logo=checkmarx&logoColor=white)
 ![AI Engine](https://img.shields.io/badge/AI-Gemini%20Multimodal%20CV-8E75C2?logo=google&logoColor=white)
-![Architecture](https://img.shields.io/badge/Architecture-Dual--Repository%20IP%20Isolation-1850B0)
-![License](https://img.shields.io/badge/License-Proprietary%20Showcase-7C3AED)
+![License](https://img.shields.io/badge/License-MIT-blue)
 
-**Sovereign Personal Portfolio & Real-Time ATS Resume Tailor Engine**  
-*Merekonsiliasi Estetika Bauhaus Fungsional dengan Ketangguhan Rekayasa Sistem Web Modern dan Proteksi Semantik AI.*
+**Etalase Portofolio Pribadi &amp; Studi Kasus Arsitektur Web Next.js**  
+*Antarmuka responsif bertema Bauhaus fungsional dengan pengujian otomatis Vitest.*
 
 [Arsitektur Sistem](#-1-arsitektur-sistem--clean-web-architecture) •
 [Monotema Bauhaus](#-2-sistem-desain-monotema-bauhaus) •
 [Semantic Vacancy Guard (HTTP 422)](#-3-ai-semantic-vacancy-guard--circuit-breaker-http-422) •
-[Integritas ATS & Zero Halusinasi](#-4-integritas-ats-resume--zero-educational-hallucination) •
+[Integritas ATS &amp; Zero Halusinasi](#-4-integritas-ats-resume--zero-educational-hallucination) •
 [Kontrak Antarmuka Publik](#-5-kontrak-antarmuka-publik-typescript) •
-[Laporan Verifikasi (124 Tests 100% Green)](#-6-laporan-verifikasi-kualitas--test-suite) •
+[Laporan Verifikasi (123 Tests 100% Green)](#-6-laporan-verifikasi-kualitas--test-suite) •
 [Daftar ADR](#-7-architecture-decision-records-adr)
 
 ---
 
 </div>
 
-> 🔒 **Pemberitahuan Repositori Publik:**  
-> Repositori ini adalah **Etalase Arsitektur Publik (*Public Architecture Showcase & System Deep-Dive*)** untuk kebutuhan evaluasi rekruter, arsitek perangkat lunak, dan engineering leads global. Basis kode produksi penuh, integrasi pipeline AI privat, dan sistem deployment disimpan secara privat di repositori internal: [`Michaelo7710/personal-portfolio-ai`](https://github.com/Michaelo7710/personal-portfolio-ai).
+> 💡 **Tentang Repositori Ini:**  
+> Repositori ini adalah **Public Architecture Showcase** untuk antarmuka dan studi kasus portofolio pribadi Mikail Nurwahid. Basis kode produksi penuh disimpan di repositori privat internal [`Michaelo7710/personal-portfolio-ai`](https://github.com/Michaelo7710/personal-portfolio-ai).
 
 ---
 
